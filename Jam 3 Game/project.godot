@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Mobile Game Practice"
+config/name="Jam 3 Project"
 run/main_scene="res://Battle.tscn"
 config/icon="res://icon.png"
 
