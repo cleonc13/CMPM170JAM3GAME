@@ -273,21 +273,18 @@ margin_bottom = -21.0
 text = "25 Hp"
 
 [node name="Boss (Enemy)" type="Node2D" parent="."]
-position = Vector2( -90, 100 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2( 1495, 129 )
 
 [node name="CharacterDefender" type="Sprite" parent="Boss (Enemy)"]
-position = Vector2( 1.52588e-05, 7.62939e-06 )
-scale = Vector2( 0.0863889, 0.087963 )
+position = Vector2( -1.99999, 202 )
+scale = Vector2( 1.05984, 0.794908 )
 texture = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Boss (Enemy)"]
-margin_left = -21.0
-margin_top = -35.0
-margin_right = 23.0
-margin_bottom = -21.0
+margin_left = -22.0
+margin_top = -40.0
+margin_right = 20.0
+margin_bottom = -24.0
 text = "25 Hp"
 
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
