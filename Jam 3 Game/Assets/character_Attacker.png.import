@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Boss001.png-a730c3100b8fc90c9c6490cf3276deb6.stex"
+path="res://.import/character_Attacker.png-24d4ac2cf2866345548b4b3a4733b5d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asserts/Boss001.png"
-dest_files=[ "res://.import/Boss001.png-a730c3100b8fc90c9c6490cf3276deb6.stex" ]
+source_file="res://Assets/character_Attacker.png"
+dest_files=[ "res://.import/character_Attacker.png-24d4ac2cf2866345548b4b3a4733b5d0.stex" ]
 
 [params]
 

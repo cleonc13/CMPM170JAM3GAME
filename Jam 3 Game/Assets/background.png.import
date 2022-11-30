@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_Healer.png-d3c1abfba5b50a5d6613171ea335bef8.stex"
+path="res://.import/background.png-c6e0edb6ae00a576ddf31b14f0c4bf17.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asserts/character_Healer.png"
-dest_files=[ "res://.import/character_Healer.png-d3c1abfba5b50a5d6613171ea335bef8.stex" ]
+source_file="res://Assets/background.png"
+dest_files=[ "res://.import/background.png-c6e0edb6ae00a576ddf31b14f0c4bf17.stex" ]
 
 [params]
 

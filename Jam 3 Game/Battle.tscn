@@ -10,10 +10,10 @@
 [ext_resource path="res://SwordActionButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://HealActionButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Rat.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Asserts/character_Defender.png" type="Texture" id=11]
-[ext_resource path="res://Asserts/character_Healer.png" type="Texture" id=12]
-[ext_resource path="res://Asserts/Boss001.png" type="Texture" id=13]
-[ext_resource path="res://Asserts/character_Attacker.png" type="Texture" id=14]
+[ext_resource path="res://Assets/character_Defender.png" type="Texture" id=11]
+[ext_resource path="res://Assets/character_Healer.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Boss001.png" type="Texture" id=13]
+[ext_resource path="res://Assets/character_Attacker.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
@@ -91,9 +91,6 @@ __meta__ = {
 margin_right = 90.0
 margin_bottom = 47.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="NextRoomButton" type="Button" parent="UI/CenterContainer"]
 visible = false
@@ -193,9 +190,6 @@ margin_bottom = 134.0
 custom_constants/vseparation = 3
 custom_constants/hseparation = 8
 columns = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SwordActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 8 )]
 

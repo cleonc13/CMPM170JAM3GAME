@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_basic.png-d74ff49d1dfaecbb7d2a364cb9e91772.stex"
+path="res://.import/character_Defender.png-270c4abc2345f72ac42b6f37ce4abd55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asserts/character_basic.png"
-dest_files=[ "res://.import/character_basic.png-d74ff49d1dfaecbb7d2a364cb9e91772.stex" ]
+source_file="res://Assets/character_Defender.png"
+dest_files=[ "res://.import/character_Defender.png-270c4abc2345f72ac42b6f37ce4abd55.stex" ]
 
 [params]
 
