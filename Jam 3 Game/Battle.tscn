@@ -64,6 +64,7 @@ texture = ExtResource( 15 )
 script = ExtResource( 6 )
 
 [node name="Dungeon" type="Sprite" parent="."]
+visible = false
 position = Vector2( 45, 80 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -71,6 +72,7 @@ __meta__ = {
 }
 
 [node name="EnemyPosition" type="Position2D" parent="."]
+visible = false
 position = Vector2( 46, 26 )
 
 [node name="Slime" parent="EnemyPosition" instance=ExtResource( 2 )]
@@ -85,13 +87,13 @@ __meta__ = {
 }
 
 [node name="UI" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 5 )
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="UI"]
@@ -220,10 +222,10 @@ anims/FadetoNewRoom = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="Player 1 (Atk)" type="Node2D" parent="."]
-position = Vector2( 456, 838 )
+position = Vector2( 362, 813 )
 
 [node name="CharacterAttacker" type="Sprite" parent="Player 1 (Atk)"]
-position = Vector2( -94.875, 59.5 )
+position = Vector2( -2, 111 )
 scale = Vector2( 0.507222, 0.405556 )
 texture = ExtResource( 14 )
 
@@ -235,10 +237,10 @@ margin_bottom = -21.0
 text = "25 Hp"
 
 [node name="Player 2 (Def)" type="Node2D" parent="."]
-position = Vector2( 550, 767 )
+position = Vector2( 524, 744 )
 
 [node name="CharacterDefender" type="Sprite" parent="Player 2 (Def)"]
-position = Vector2( -18, 49.5 )
+position = Vector2( 2, 116 )
 scale = Vector2( 0.471111, 0.412963 )
 texture = ExtResource( 11 )
 __meta__ = {
@@ -326,7 +328,40 @@ margin_bottom = 73.0
 text = "HP"
 align = 1
 
+[node name="GameUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Attack" type="Button" parent="GameUI"]
+margin_left = 813.0
+margin_top = 870.0
+margin_right = 920.0
+margin_bottom = 927.0
+text = "Attack"
+
+[node name="Items\?" type="Button" parent="GameUI"]
+margin_left = 958.0
+margin_top = 950.0
+margin_right = 1062.0
+margin_bottom = 1007.0
+text = "Items?"
+
+[node name="Magic" type="Button" parent="GameUI"]
+margin_left = 956.0
+margin_top = 869.0
+margin_right = 1062.0
+margin_bottom = 926.0
+text = "Magic"
+
+[node name="Defend" type="Button" parent="GameUI"]
+margin_left = 813.0
+margin_top = 951.0
+margin_right = 918.0
+margin_bottom = 1008.0
+text = "Defend"
+
 [connection signal="ap_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_ap_changed"]
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]
 [connection signal="pressed" from="UI/CenterContainer/NextRoomButton" to="." method="_on_NextRoomButton_pressed"]
+[connection signal="pressed" from="GameUI/Attack" to="." method="_on_AttackButton_pressed"]
