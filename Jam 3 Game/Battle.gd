@@ -8,9 +8,14 @@ onready var battleActionButtons = $UI/BattleActionButtons
 onready var animationPlayer = $AnimationPlayer
 onready var nextRoomButton = $UI/CenterContainer/NextRoomButton
 onready var enemyPosition = $EnemyPosition
+onready var Player1 = $Player1
+onready var Player2 = $Player2
+onready var Player3 = $Player3
+onready var playerStats = BattleUnits.PlayerStats
 
 #boss health
 #onready var hpLabel = $"Boss (Enemy)/Label"
+
 
 func _ready():
 	randomize()
@@ -20,10 +25,22 @@ func _ready():
 		enemy.connect("on_death", self, "_on_Enemy_died")
 
 func start_player_turn():
+	if playerStats.player_Number == 0:
+		Player1.show()
+		Player2.hide()
+		Player3.hide()
+	elif playerStats.player_Number == 1:
+		Player1.hide()
+		Player2.show()
+		Player3.hide()
+	elif playerStats.player_Number == 2:
+		Player1.hide()
+		Player2.hide()
+		Player3.show()
 	battleActionButtons.show()
-	var playerStats = BattleUnits.PlayerStats
 	playerStats.ap = playerStats.max_ap
 	yield(playerStats, "end_turn")
+	playerStats.player_Number = (playerStats.player_Number + 1)%3
 	start_enemy_turn()
 	
 func start_enemy_turn():
@@ -57,3 +74,18 @@ func _on_NextRoomButton_pressed():
 
 #func _on_AttackButton_pressed():
 	#hpLabel.text
+
+
+func _on_Swap_player_Number_changed(value):
+	if playerStats.player_Number == 0:
+		Player1.show()
+		Player2.hide()
+		Player3.hide()
+	elif playerStats.player_Number == 1:
+		Player1.hide()
+		Player2.show()
+		Player3.hide()
+	elif playerStats.player_Number == 2:
+		Player1.hide()
+		Player2.hide()
+		Player3.show()

@@ -9,7 +9,7 @@
 [ext_resource path="res://StatsPanel.gd" type="Script" id=7]
 [ext_resource path="res://SwordActionButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://HealActionButton.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Rat.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Boss.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/character_Defender.png" type="Texture" id=11]
 [ext_resource path="res://Assets/character_Healer.png" type="Texture" id=12]
 [ext_resource path="res://Assets/character_Attacker.png" type="Texture" id=14]
@@ -70,10 +70,10 @@ __meta__ = {
 }
 
 [node name="EnemyPosition" type="Position2D" parent="."]
-position = Vector2( 46, 26 )
+position = Vector2( 1650, 812 )
 
 [node name="Slime" parent="EnemyPosition" instance=ExtResource( 2 )]
-position = Vector2( 1594, 763 )
+position = Vector2( 0, 2 )
 
 [node name="MobileRpgMockup" type="Sprite" parent="."]
 visible = false
@@ -97,6 +97,9 @@ __meta__ = {
 margin_right = 90.0
 margin_bottom = 47.0
 mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="NextRoomButton" type="Button" parent="UI/CenterContainer"]
 visible = false
@@ -109,9 +112,9 @@ text = "ENTER NEXT ROOM"
 
 [node name="StatsPanel" type="Panel" parent="UI"]
 margin_left = 23.0
-margin_top = 564.0
+margin_top = 538.0
 margin_right = 232.0
-margin_bottom = 589.0
+margin_bottom = 563.0
 rect_scale = Vector2( 4, 4 )
 script = ExtResource( 7 )
 
@@ -168,30 +171,30 @@ align = 1
 valign = 1
 
 [node name="TextboxPanel" type="Panel" parent="UI"]
-margin_left = -2.0
-margin_top = 138.0
-margin_right = 92.0
-margin_bottom = 161.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+anchor_top = 0.316
+anchor_bottom = 0.316
+margin_left = 801.0
+margin_top = 606.72
+margin_right = 895.0
+margin_bottom = 629.72
+rect_scale = Vector2( 3, 3 )
 
 [node name="Textbox" type="RichTextLabel" parent="UI/TextboxPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = -2.0
+margin_left = 5.33333
+margin_top = 3.33334
+margin_right = -0.666672
+margin_bottom = -0.666656
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_constants/line_separation = 2
 custom_styles/normal = SubResource( 3 )
 
 [node name="BattleActionButtons" type="GridContainer" parent="UI"]
-margin_left = 816.0
-margin_top = 882.0
-margin_right = 888.0
-margin_bottom = 914.0
+margin_left = 820.0
+margin_top = 818.0
+margin_right = 892.0
+margin_bottom = 850.0
 rect_scale = Vector2( 3.5, 3.5 )
 custom_constants/vseparation = 3
 custom_constants/hseparation = 8
@@ -219,12 +222,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Items\?" parent="UI/BattleActionButtons" instance=ExtResource( 18 )]
+[node name="Swap" parent="UI/BattleActionButtons" instance=ExtResource( 18 )]
 margin_left = 40.0
 margin_top = 16.0
 margin_right = 72.0
 margin_bottom = 29.0
-text = "ITEMS?"
+text = "SWAP"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -244,25 +247,25 @@ __meta__ = {
 anims/FadetoNewRoom = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
-[node name="Player 1 (Atk)" type="Node2D" parent="."]
-position = Vector2( 362, 813 )
+[node name="Player1" type="Node2D" parent="."]
+position = Vector2( 360, 782 )
 
-[node name="CharacterAttacker" type="Sprite" parent="Player 1 (Atk)"]
+[node name="CharacterAttacker" type="Sprite" parent="Player1"]
 position = Vector2( -2, 111 )
 scale = Vector2( -0.507, 0.406 )
 texture = ExtResource( 14 )
 
-[node name="Label" type="Label" parent="Player 1 (Atk)"]
+[node name="Label" type="Label" parent="Player1"]
 margin_left = -21.0
 margin_top = -35.0
 margin_right = 23.0
 margin_bottom = -21.0
 text = "25 Hp"
 
-[node name="Player 2 (Def)" type="Node2D" parent="."]
-position = Vector2( 524, 744 )
+[node name="Player2" type="Node2D" parent="."]
+position = Vector2( 523, 689 )
 
-[node name="CharacterDefender" type="Sprite" parent="Player 2 (Def)"]
+[node name="CharacterDefender" type="Sprite" parent="Player2"]
 position = Vector2( 2, 116 )
 scale = Vector2( -0.471, 0.413 )
 texture = ExtResource( 11 )
@@ -270,17 +273,17 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="Player 2 (Def)"]
+[node name="Label" type="Label" parent="Player2"]
 margin_left = -21.0
 margin_top = -35.0
 margin_right = 23.0
 margin_bottom = -21.0
 text = "25 Hp"
 
-[node name="Player 3 (Heal)" type="Node2D" parent="."]
-position = Vector2( 211, 712 )
+[node name="Player3" type="Node2D" parent="."]
+position = Vector2( 215, 680 )
 
-[node name="CharacterDefender" type="Sprite" parent="Player 3 (Heal)"]
+[node name="CharacterDefender" type="Sprite" parent="Player3"]
 position = Vector2( -1, 111 )
 scale = Vector2( -0.432, 0.439 )
 texture = ExtResource( 12 )
@@ -288,7 +291,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="Player 3 (Heal)"]
+[node name="Label" type="Label" parent="Player3"]
 margin_left = -21.0
 margin_top = -35.0
 margin_right = 23.0
@@ -299,3 +302,4 @@ text = "25 Hp"
 [connection signal="hp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_hp_changed"]
 [connection signal="mp_changed" from="PlayerStats" to="UI/StatsPanel" method="_on_PlayerStats_mp_changed"]
 [connection signal="pressed" from="UI/CenterContainer/NextRoomButton" to="." method="_on_NextRoomButton_pressed"]
+[connection signal="player_Number_changed" from="UI/BattleActionButtons/Swap" to="." method="_on_Swap_player_Number_changed"]

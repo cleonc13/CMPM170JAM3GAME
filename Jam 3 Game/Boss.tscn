@@ -4,7 +4,15 @@
 [ext_resource path="res://Assets/Boss001.png" type="Texture" id=2]
 
 [node name="Boss" instance=ExtResource( 1 )]
-hp = 100
+hp = 9
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
+
+[node name="HpLabel" parent="." index="1"]
+margin_left = -107.0
+margin_top = -317.0
+margin_right = -69.0
+margin_bottom = -302.0
+rect_scale = Vector2( 6, 6 )
+text = "9 hp"
