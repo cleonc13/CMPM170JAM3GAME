@@ -3,7 +3,6 @@ extends "res://ActionButton.gd"
 const Slash = preload("res://Slash.tscn")
 
 var rng = RandomNumberGenerator.new()
-var crit = 90
 
 func _ready():
 	rng.randomize()
@@ -14,7 +13,8 @@ func _on_pressed():
 	var my_random_number = rng.randi_range(0, 100) #generate number from 0 to 100
 	if enemy != null and playerStats != null:
 		create_slash(enemy.global_position)
-		if my_random_number >= max(crit, 30): #will either be crit chance of crit or 30
+		print(playerStats.crit)
+		if my_random_number >= max(playerStats.crit, 30): #will either be crit chance of crit or 30
 			enemy.take_damage(max(0, 8 - enemy.shield))
 		else:
 			enemy.take_damage(max(0, 4 - enemy.shield))

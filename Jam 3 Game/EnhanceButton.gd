@@ -1,11 +1,8 @@
 extends "res://ActionButton.gd"
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _on_pressed():
-	pass
+	var playerStats = BattleUnits.PlayerStats
+	if playerStats != null:
+		playerStats.ap -= 1
+		playerStats.crit -= 15
