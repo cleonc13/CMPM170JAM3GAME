@@ -11,9 +11,6 @@ rect_min_size = Vector2( 32, 13 )
 theme = ExtResource( 2 )
 text = "d"
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HoverInfo" parent="." instance=ExtResource( 3 )]
 mouse_filter = 1
