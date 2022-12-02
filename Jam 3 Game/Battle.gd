@@ -111,8 +111,9 @@ func _on_SwapButton_player_Number_changed(value):
 		Warcry.hide()
 		
 		Player1.hide()
-		Player2.show()
-		Player3.hide()
+		Player2.hide()
+		Player3.show()
+		
 	elif playerStats.player_Number == 2:
 		print(playerStats.player_Number)
 		shieldAction.show()
@@ -127,7 +128,6 @@ func _on_SwapButton_player_Number_changed(value):
 		magic.hide()
 		curse.hide()
 		
-		
 		Player1.hide()
-		Player2.hide()
-		Player3.show()
+		Player2.show()
+		Player3.hide()
