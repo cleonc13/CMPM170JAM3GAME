@@ -103,7 +103,6 @@ margin_left = 9.0
 margin_top = -324.0
 margin_right = 49.0
 margin_bottom = -310.0
-rect_scale = Vector2( 6, 6 )
 theme = ExtResource( 3 )
 text = "15 Shield"
 align = 1

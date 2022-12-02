@@ -5,3 +5,8 @@
 
 [node name="ShieldActionButton" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="HoverInfo" parent="." index="0"]
+description = "Shield Attack
+An attack with a Shield
+Does 2 damage"

@@ -5,3 +5,7 @@
 
 [node name="EnhanceButton" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="HoverInfo" parent="." index="0"]
+description = "Enhance
+Increases Crit Chance"
