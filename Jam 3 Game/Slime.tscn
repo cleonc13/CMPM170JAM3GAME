@@ -4,16 +4,15 @@
 [ext_resource path="res://Assets/Slime001.png" type="Texture" id=2]
 
 [node name="Slime" instance=ExtResource( 1 )]
-hp = 9
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
 
 [node name="HpLabel" parent="." index="1"]
-margin_left = -100.0
-margin_top = -190.0
-margin_right = -62.0
-margin_bottom = -175.0
+margin_left = -244.0
+margin_top = -348.0
+margin_right = -206.0
+margin_bottom = -333.0
 rect_scale = Vector2( 6, 6 )
 text = "9  hp"
 
@@ -23,3 +22,10 @@ margin_top = -5.0
 margin_right = 21.0
 margin_bottom = 16.0
 description = "A green slime"
+
+[node name="ShieldLabel" parent="." index="4"]
+margin_left = 25.0
+margin_top = -343.0
+margin_right = 65.0
+margin_bottom = -329.0
+rect_scale = Vector2( 6, 6 )

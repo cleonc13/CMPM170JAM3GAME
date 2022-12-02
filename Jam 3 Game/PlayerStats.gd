@@ -9,6 +9,7 @@ var ap = max_ap setget set_ap
 var max_mp = 10
 var mp = max_mp setget set_mp
 var player_Number = 0
+var crit = 90
 
 signal hp_changed(value)
 signal ap_changed(value)
