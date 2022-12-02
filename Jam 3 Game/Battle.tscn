@@ -217,60 +217,60 @@ __meta__ = {
 }
 
 [node name="EnhanceButton" parent="UI/BattleActionButtons" instance=ExtResource( 13 )]
+visible = false
 margin_left = 40.0
 margin_right = 72.0
 text = "ENHANCE"
 
 [node name="ShieldBreakerButton" parent="UI/BattleActionButtons" instance=ExtResource( 19 )]
-margin_top = 16.0
-margin_bottom = 29.0
+visible = false
+margin_left = 40.0
+margin_right = 72.0
 text = "BREAKER"
 
 [node name="HealActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 9 )]
 margin_left = 40.0
-margin_top = 16.0
 margin_right = 72.0
-margin_bottom = 29.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MagicButton" parent="UI/BattleActionButtons" instance=ExtResource( 22 )]
-margin_top = 32.0
-margin_bottom = 45.0
+visible = false
+margin_top = 16.0
+margin_bottom = 29.0
 text = "MAGIC"
 script = ExtResource( 25 )
 
 [node name="CurseButton" parent="UI/BattleActionButtons" instance=ExtResource( 20 )]
-margin_left = 40.0
-margin_top = 32.0
-margin_right = 72.0
-margin_bottom = 45.0
+visible = false
+margin_top = 16.0
+margin_bottom = 29.0
 text = "CURSE"
 
 [node name="ShieldActionButton" parent="UI/BattleActionButtons" instance=ExtResource( 18 )]
-margin_top = 48.0
-margin_bottom = 61.0
+visible = false
+margin_top = 16.0
+margin_bottom = 29.0
 text = "ACTION"
 
 [node name="DefendButton" parent="UI/BattleActionButtons" instance=ExtResource( 17 )]
-margin_left = 40.0
-margin_top = 48.0
-margin_right = 72.0
-margin_bottom = 61.0
+visible = false
+margin_top = 16.0
+margin_bottom = 29.0
 text = "DEFEND"
 script = ExtResource( 27 )
 
 [node name="WarCryButton" parent="UI/BattleActionButtons" instance=ExtResource( 21 )]
-margin_top = 64.0
-margin_bottom = 77.0
+visible = false
+margin_top = 16.0
+margin_bottom = 29.0
 text = "WARCRY"
 
 [node name="SwapButton" parent="UI/BattleActionButtons" instance=ExtResource( 16 )]
-margin_left = 40.0
-margin_top = 64.0
-margin_right = 72.0
-margin_bottom = 77.0
+visible = false
+margin_top = 16.0
+margin_bottom = 29.0
 text = "SWAP"
 
 [node name="Fade" type="ColorRect" parent="."]
@@ -297,6 +297,7 @@ scale = Vector2( -0.507, 0.406 )
 texture = ExtResource( 14 )
 
 [node name="Label" type="Label" parent="Player1"]
+visible = false
 margin_left = -21.0
 margin_top = -35.0
 margin_right = 23.0
@@ -315,6 +316,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Player2"]
+visible = false
 margin_left = -21.0
 margin_top = -35.0
 margin_right = 23.0
@@ -333,6 +335,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Player3"]
+visible = false
 margin_left = -21.0
 margin_top = -35.0
 margin_right = 23.0
